@@ -1,0 +1,132 @@
+body {
+    font-family: sans-serif;
+}
+.head  .logo{
+    background: url("assets/images/logo.svg");
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 48px;
+    padding-bottom: 50px;
+}
+.head .navBar {
+    background: url("assets/images/icon-menu.svg");
+    height: 60px;
+    background-repeat: no-repeat;
+}
+
+
+.head > .img {
+    background: url("assets/images/image-web-3-mobile.jpg");
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.head>.title {
+    font-family: sans-serif;
+}
+
+.head>.description {
+    color: grey;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.head>.btn {
+    align-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    justify-content: center;
+    height: 30px;
+    width: 90px;
+    background: hsl(5, 85%, 63%);
+    font-size: 10px;
+    display: flex;
+}
+
+.highlights {
+    background: hsl(240, 100%, 5%);
+    color: white;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    word-spacing: 1.5px;
+}
+
+.highlights>.updates {
+    color: hsl(35, 77%, 62%);
+}
+
+.highlights >.title {
+    font-weight: bold;
+}
+
+.highlights > .description {
+    font-size: 14px;
+    color: grey;
+    font-weight: 300;
+}
+.bottom{
+    padding: 20px; 
+}
+
+
+@media(min-width : 500px){
+    .bottom{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media(min-width : 500px){
+    .highlights{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(min-width : 500px){
+    .bottom{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media(min-width : 500px){
+    .head{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.bottom  .num {
+    color: hsl(5, 85%, 63%);
+    margin: 0;
+    font-size: 32px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.bottom  .title{
+    font-weight: bold;
+    color: black;
+    padding-top: 10px;
+    margin:0;
+}
+.bottom  .description{
+    color: grey;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.topElement{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 10px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
