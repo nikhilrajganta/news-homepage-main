@@ -1,38 +1,72 @@
 body {
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
 }
-.head  .logo{
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header .logo {
     background: url("assets/images/logo.svg");
-    height: 20px;
+    height: 30px;
     background-repeat: no-repeat;
     background-size: 48px;
-    padding-bottom: 50px;
+    width: 48px;
 }
-.head .navBar {
+
+.header .navBar {
     background: url("assets/images/icon-menu.svg");
-    height: 60px;
+    height: 20px;
+    width: 20px;
     background-repeat: no-repeat;
 }
 
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
 
-.head > .img {
+.left-div, .right-div {
+    box-sizing: border-box;
+
+}
+
+.left-div {
+    width: 100%;
+}
+
+.right-div {
+    width: 100%;
+}
+
+.left-div .img {
     background: url("assets/images/image-web-3-mobile.jpg");
     height: 150px;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.head>.title {
+.left-div .head-content {
+    padding: 20px 0;
+}
+
+.head-content .title {
     font-family: sans-serif;
 }
 
-.head>.description {
+.head-content .description {
     color: grey;
     font-weight: 300;
     font-size: 18px;
 }
 
-.head>.btn {
+.head-content .btn {
     align-content: center;
     align-items: center;
     padding-left: 5px;
@@ -48,59 +82,32 @@ body {
 .highlights {
     background: hsl(240, 100%, 5%);
     color: white;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 20px;
     word-spacing: 1.5px;
 }
 
-.highlights>.updates {
+.highlights .updates {
     color: hsl(35, 77%, 62%);
 }
 
-.highlights >.title {
+.highlights .title {
     font-weight: bold;
 }
 
-.highlights > .description {
+.highlights .description {
     font-size: 14px;
     color: grey;
     font-weight: 300;
 }
-.bottom{
-    padding: 20px; 
+
+.bottom {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-
-@media(min-width : 500px){
-    .bottom{
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-@media(min-width : 500px){
-    .highlights{
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media(min-width : 500px){
-    .bottom{
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-@media(min-width : 500px){
-    .head{
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.bottom  .num {
+.bottom .num {
     color: hsl(5, 85%, 63%);
     margin: 0;
     font-size: 32px;
@@ -108,25 +115,102 @@ body {
     font-weight: bold;
 }
 
-.bottom  .title{
+.bottom .title {
     font-weight: bold;
     color: black;
     padding-top: 10px;
-    margin:0;
+    margin: 0;
 }
-.bottom  .description{
+
+.bottom .description {
     color: grey;
     margin: 0;
     padding-top: 10px;
 }
 
-.topElement{
+.topElement {
     display: flex;
-    flex-direction: row-reverse;
-    padding-top: 10px;
+    flex-direction: row;
+    width: 100%;
 }
-.content {
+
+.topElement .img {
+    flex: 0 0 100px;
+}
+
+.topElement .img img {
+    height: 100%;
+    width: 100px;
+}
+
+.topElement .content {
     display: flex;
     flex-direction: column;
     padding-left: 15px;
+}
+
+@media (min-width: 600px) {
+    .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-div {
+        width: 60%;
+        padding-right: 20px;
+    }
+
+    .right-div {
+        width: 40%;
+        padding-left: 20px;
+    }
+
+    .left-div .img {
+        background: url("assets/images/image-web-3-desktop.jpg");
+        height: 300px;
+    }
+
+    .left-div .head-content {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .head-content .title {
+        flex: 1;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .head-content .text-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px 20px;
+    }
+
+    .topElement {
+        flex: 1 1 30%;
+        flex-direction: row;
+    }
+
+    .topElement .img {
+        flex: 0 0 auto;
+        height: 130px;
+        width: 130px;
+    }
+
+    .topElement .img img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .topElement .content {
+        flex: 1;
+    }
 }
